@@ -1,4 +1,4 @@
-package sk.umb.fpv.ki.mabraham.mikrosluzby.umyvaren.vozidlosluzba;
+package sk.umb.fpv.ki.mabraham.mikrosluzby.umyvaren.zakazniksluzba;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -20,8 +20,8 @@ public class SwaggerConfig {
 	public static final Contact DEFAULT_CONTACT = new Contact("Mario Abraham",
 			"www", "mario.abraham@outlook.com");
 
-	public static final ApiInfo DEFAULT_API_INFO = new ApiInfo("Sluzba vozidlo",
-			"Sluzba pre vozidla", "1.0", "urn:tos", DEFAULT_CONTACT, "Apache 2.0",
+	public static final ApiInfo DEFAULT_API_INFO = new ApiInfo("Sluzba zakaznik",
+			"Sluzba pre zakaznikov", "1.0", "urn:tos", DEFAULT_CONTACT, "Apache 2.0",
 			"http://www.apache.org/licenses/LICENSE-2.0");
 
 	private static final Set<String> DEFAULT_PRODUCES_AND_CONSUMES = new HashSet<String>(

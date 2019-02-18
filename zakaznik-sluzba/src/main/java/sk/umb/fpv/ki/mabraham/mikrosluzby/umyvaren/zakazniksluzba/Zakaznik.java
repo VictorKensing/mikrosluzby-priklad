@@ -1,12 +1,14 @@
 package sk.umb.fpv.ki.mabraham.mikrosluzby.umyvaren.zakazniksluzba;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Zakaznik {
 
 	@Id
+	@GeneratedValue
 	private Long id;
 
 	private String meno;
@@ -46,6 +48,11 @@ public class Zakaznik {
 
 	public void setPriezvisko(String priezvisko) {
 		this.priezvisko = priezvisko;
+	}
+
+	@Override
+	public String toString() {
+		return "Zakaznik [id=" + id + ", meno=" + meno + ", priezvisko=" + priezvisko + "]";
 	}
 
 }
