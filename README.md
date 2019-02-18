@@ -20,22 +20,22 @@ Spustenie aplikacii:
 
 RESTFULL services
 
-- vozidlo: vozidlo-sluzba port 8100
-databaza h2 konzola: http://localhost:8100/h2-console
-dokumentacia swagger: http://localhost:8100/swagger-ui.html   http://localhost:8100/v2/api-docs
-najdi vsetky vozidla: http://localhost:8100/vozidla
-najdi vsetky vozidla cez zuul: http://localhost:8765/vozidlo-sluzba/vozidla
-najdi vozidlo podla ecv: http://localhost:8100/vozidla/{ecv} priklad http://localhost:8100/vozidla/AA111AA
-najdi vozidlo podla ecv cez zuul: http://localhost:8765/vozidlo-sluzba/vozidla/{ecv} priklad http://localhost:8765/vozidlo-sluzba/vozidla/AA111AA
-pridaj vozidlo json post: localhost:8100/vozidla
+1) vozidlo: vozidlo-sluzba port 8100
+- databaza h2 konzola: http://localhost:8100/h2-console
+- dokumentacia swagger: http://localhost:8100/swagger-ui.html   http://localhost:8100/v2/api-docs
+- najdi vsetky vozidla: http://localhost:8100/vozidla
+- najdi vsetky vozidla cez zuul: http://localhost:8765/vozidlo-sluzba/vozidla
+- najdi vozidlo podla ecv: http://localhost:8100/vozidla/{ecv} priklad http://localhost:8100/vozidla/AA111AA
+- najdi vozidlo podla ecv cez zuul: http://localhost:8765/vozidlo-sluzba/vozidla/{ecv} priklad http://localhost:8765/vozidlo-sluzba/vozidla/AA111AA
+- pridaj vozidlo json post: localhost:8100/vozidla
 
-- zakaznik: zakaznik-sluzba port 8000
-databaza h2 konzola: http://localhost:8000/h2-console
-dokumentacia swagger: http://localhost:8000/swagger-ui.html   http://localhost:8000/v2/api-docs
-najdi vsetkych zakaznikov: http://localhost:8000/zakaznici
-najdi vsetkych zakaznikov cez zuul: http://localhost:8765/zakaznik-sluzba/zakaznici
-najdi zakaznika podla id:http://localhost:8000/zakaznici/{id} priklad http://localhost:8000/zakaznici/20001
-najdi zakaznika podla id cez zuul:http://localhost:8765/zakaznik-sluzba/zakaznici/{id} priklad http://localhost:8765/zakaznik-sluzba/zakaznici/20001
+2) zakaznik: zakaznik-sluzba port 8000
+- databaza h2 konzola: http://localhost:8000/h2-console
+- dokumentacia swagger: http://localhost:8000/swagger-ui.html   http://localhost:8000/v2/api-docs
+- najdi vsetkych zakaznikov: http://localhost:8000/zakaznici
+- najdi vsetkych zakaznikov cez zuul: http://localhost:8765/zakaznik-sluzba/zakaznici
+- najdi zakaznika podla id:http://localhost:8000/zakaznici/{id} priklad http://localhost:8000/zakaznici/20001
+- najdi zakaznika podla id cez zuul:http://localhost:8765/zakaznik-sluzba/zakaznici/{id} priklad http://localhost:8765/zakaznik-sluzba/zakaznici/20001
 
 
 
