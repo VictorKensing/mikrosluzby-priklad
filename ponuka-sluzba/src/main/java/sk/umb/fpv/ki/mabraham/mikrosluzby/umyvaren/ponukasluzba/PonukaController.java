@@ -1,4 +1,4 @@
-package sk.umb.fpv.ki.mabraham.mikrosluzby.umyvaren.zakazniksluzba;
+package sk.umb.fpv.ki.mabraham.mikrosluzby.umyvaren.ponukasluzba;
 
 import java.net.URI;
 import java.util.List;
@@ -18,41 +18,41 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
-public class ZakaznikController {
-
+public class PonukaController {
+	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
-	private ZakaznikRepository repository;
+	private PonukaRepository repository;
 
-	@GetMapping("/zakaznici")
-	public List<Zakaznik> retrieveAll() {
+	@GetMapping("/ponuky")
+	public List<Ponuka> retrieveAll() {
 
-		List<Zakaznik> zakaznici = repository.findAll();
+		List<Ponuka> ponuky = repository.findAll();
 
-		logger.info("{}", zakaznici);
+		logger.info("{}", ponuky);
 
-		return zakaznici;
+		return ponuky;
 	}
 
-	@GetMapping("/zakaznici/{id}")
-	public Zakaznik retrieveZakaznik(@PathVariable long id) {
+	@GetMapping("/ponuky/{id}")
+	public Ponuka retrievePonuka(@PathVariable long id) {
 
-		Optional<Zakaznik> zakaznikOptional = repository.findById(id);
+		Optional<Ponuka> PonukaOptional = repository.findById(id);
 
-		Zakaznik zakaznik = zakaznikOptional.get();
+		Ponuka Ponuka = PonukaOptional.get();
 
-		logger.info("{}", zakaznik);
+		logger.info("{}", Ponuka);
 
-		return zakaznik;
+		return Ponuka;
 	}
 
-	@PostMapping("/zakaznici")
-	public ResponseEntity<Object> createZakaznik(@Valid @RequestBody Zakaznik zakaznik) {
-		Zakaznik novyZakaznik = repository.save(zakaznik);
+	@PostMapping("/ponuky")
+	public ResponseEntity<Object> createPonuka(@Valid @RequestBody Ponuka Ponuka) {
+		Ponuka novaPonuka = repository.save(Ponuka);
 
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-				.buildAndExpand(novyZakaznik.getId()).toUri();
+				.buildAndExpand(novaPonuka.getId()).toUri();
 
 		return ResponseEntity.created(location).build();
 	}
