@@ -17,6 +17,12 @@ Spustenie aplikacii:
 4) VozidloSluzbaApplication
 5) PonukaSluzbaApplication
 
+V adresari jars sa nachadzaju uz spustitelne sluzby na localhost. Spustenie:
+- java -jar eureka-naming-server.jar
+- java -jar zuul-api-gateway-server.jar
+- java -jar zakaznik-sluzba.jar
+- java -jar vozidlo-sluzba.jar
+- java -jar ponuka-sluzba.jar
 
 - kontrola registrovanych aplikacii v eureka http://localhost:8761/ 
 
