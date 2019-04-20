@@ -24,7 +24,7 @@ V adresari jars sa nachadzaju uz spustitelne sluzby na localhost. Spustenie:
 - java -jar vozidlo-sluzba.jar
 - java -jar ponuka-sluzba.jar
 
-- kontrola registrovanych aplikacii v eureka http://localhost:8761/ 
+Kontrola registrovanych aplikacii v eureka http://localhost:8761/ 
 
 RESTFULL services
 
